@@ -24,14 +24,13 @@ This project provides a robust implementation of Server-Sent Events with bidirec
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/BidirectionalSSE.git
-cd BidirectionalSSE
+git clone https://github.com/faihan6/bidirectional-sse.git
+cd bidirectional-sse
 ```
 
 2. Install dependencies:
-```bash
-npm install
-```
+
+Here is the fun part, there are no dependencies!
 
 ## Usage
 
@@ -80,13 +79,16 @@ client.sendMessage('Hello Server!');
 ##### Events
 
 - `connection`: Fired when a new client connects
-- `message`: Fired when a message is received from a client
 
 #### class `EventSourceClient`
 Represents a client connected to EventSourceServer. Constructor is not exposed.
 
 ##### Methods
 - `send(message: string)`: Sends a new message.
+
+##### Events
+
+- `message`: Fired when a message is received by this client
 
 
 ### Client
@@ -100,6 +102,10 @@ Represents a client connected to EventSourceServer. Constructor is not exposed.
 - `setupcomplete`: thrown when setup is complete. Messages can be sent only after this event is thrown.
 - `message`: thrown when a message has arrived.
     - `event.data`: denotes the actual message
+
+## Examples
+
+Example files are provided inside `./client/example` and `./server/example` directories for reference.
 
 ## Contributing
 

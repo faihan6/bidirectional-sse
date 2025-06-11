@@ -1,0 +1,16 @@
+<html>
+    DuplexEvents test page. Open console for output.<br> "duplex" object is exposed in global scope.
+    <script src="../duplex-events-client.js"></script>
+
+    <script>
+        const config = {
+            sseURL: "http://localhost:3000/sse",
+            httpURL: "http://localhost:3000"
+        }
+        const duplex = new DuplexEvents(config);
+
+        duplex.addEventListener('setupcomplete', () => console.log('setup complete..!!'))
+        duplex.addEventListener('message', (e) => console.log('message from duplex', e.data))
+        
+    </script>
+</htmlk>
