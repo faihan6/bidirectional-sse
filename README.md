@@ -1,6 +1,6 @@
 # Bidirectional Server-Sent Events (SSE)
 
-A Node.js implementation of bidirectional messaging server that enables real-time communication between server and clients without using WebSockets. It uses,
+A Node.js implementation of bidirectional messaging server that enables two-way communication between server and clients without using WebSockets. It uses,
 
 - SSE for server to client comunication
 - HTTP for client to server communication.
