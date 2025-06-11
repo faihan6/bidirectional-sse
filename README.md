@@ -63,8 +63,10 @@ client.addEventListener('message', (event) => {
     console.log('Received message:', event.data);
 });
 
-// Send message to server
-client.sendMessage('Hello Server!');
+// Send message to server once setup is complete
+client.addEventListener('setupcomplete', (event) => {
+    client.send('Hello Server!');
+});
 ```
 
 ## API Reference
